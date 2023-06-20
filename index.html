@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+	<head>
+		<title>NASA APOD: Astronomy Picture of the Day</title>
+
+		<!-- Character encoding For HTML DOM (UTF-8 character set covers most characters & symbols) -->
+		<meta charset="UTF-8">
+
+		<!-- Device viewing settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- NASA favicon -->
+        <link rel="icon" type="image/x-icon" href="https://api.nasa.gov/assets/img/favicons/favicon-192.png">
+
+		<!-- Less compile directory -->
+		<link rel="stylesheet/less" href="assets/css-less/style.less">
+
+		<!-- CSS frameworks & libraries -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+
+		<!-- JavaScript frameworks & libraries -->
+		<script src="https://cdn.jsdelivr.net/npm/less" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+		<!-- CSS loaded by complied Less -->
+		<style></style>
+	</head>
+
+	<body class="nasa-apod">
+		<main>
+
+			<section class="media-today">
+				<h1>Astronomy Picture of the Day</h1>
+				<div class="media-container post-1"></div>
+			</section>
+
+			<section class="media-past-eight-days">
+				<h1>Astronomy Picture of the Day <span class="substring">(Past 8 Days)</span></h1>
+				<div class="row row-1 pure-g">
+					<div class="media-container post-2 pure-u-lg-1-4 pure-u-md-1-2 pure-u-1"></div>
+					<div class="media-container post-3 pure-u-lg-1-4 pure-u-md-1-2 pure-u-1"></div>
+					<div class="media-container post-4 pure-u-lg-1-4 pure-u-md-1-2 pure-u-1"></div>
+					<div class="media-container post-5 pure-u-lg-1-4 pure-u-md-1-2 pure-u-1"></div>
+				</div>
+				<div class="row row-2 pure-g">
+					<div class="media-container post-6 pure-u-lg-1-4 pure-u-md-1-2 pure-u-1"></div>
+					<div class="media-container post-7 pure-u-lg-1-4 pure-u-md-1-2 pure-u-1"></div>
+					<div class="media-container post-8 pure-u-lg-1-4 pure-u-md-1-2 pure-u-1"></div>
+					<div class="media-container post-9 pure-u-lg-1-4 pure-u-md-1-2 pure-u-1"></div>
+				</div>
+			</section>
+
+		</main>
+
+		<script src="assets/js/dates.js"></script>
+		<script src="assets/js/modal-images.js"></script>
+		<script src="assets/js/api-key.js"></script>
+		<script src="assets/js/api-get-data.js"></script>
+		<script src="assets/js/api-call.js"></script>
+
+	</body>
+</html>
