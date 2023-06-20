@@ -1,0 +1,178 @@
+.nasa-apod {
+
+	.media-today {
+		background: @color-antique-white;
+		color: #000;
+		padding: 2rem;
+
+		h1 {
+			font-family: @font-merienda;
+			font-size: 2.25rem;
+			line-height: 2.35rem;
+			padding: 0 0 4rem 0;
+			text-align: center;
+		}
+
+		.media-container {
+
+			.non-modal-media {
+
+				.date {
+					font-family: Arial, sans-serif;
+					font-size: 0.85rem;
+					font-weight: bold;
+					padding: 0 0 0.5rem;
+					text-align: center;
+				}
+
+				h2 {
+					font-family: @font-overlock;
+					font-size: 2rem;
+					margin: 0 auto;
+					max-width: 900px;
+					padding: 0 0 1.5rem 0;
+					text-align: center;
+				}
+
+				figure {
+					margin: 0 auto;
+					max-width: 700px;
+
+					picture {
+						overflow: hidden;
+
+						img {
+							border-radius: 1.5rem;
+							transform: scale(1.00);
+							transition: transform 0.3s ease-in, border-radius 0.3s ease-in;
+
+							&:hover {
+								border-radius: 0;
+								cursor: pointer;
+								opacity: 0.75;
+								transform: scale(1.05);
+								transition: transform 0.3s ease-in, border-radius 0.3s ease-in;
+							}
+						}
+					}
+
+					figcaption {
+						color: @color-dark-gray;
+					}
+				}
+
+				.iframe-container {
+					height: 450px;
+					margin: 0 auto;
+					max-width: 700px;
+					position: relative;
+					transition: box-shadow 0.3s ease-in;
+
+					&:hover {
+						box-shadow: 0 0 0.25rem 0.25rem @color-blue;
+						transition: box-shadow 0.3s ease-in;
+					}
+
+					iframe {
+						@iframe-16-9-aspect-ratio();
+					}
+				}
+
+				.description {
+					font-family: @font-ibm-plex-sans;
+					font-size: 0.95rem;
+					margin: 0 auto;
+					max-width: 700px;
+					line-height: 1.25rem;
+					padding: 1.5rem 0;
+				}
+
+				.source {
+					display: flex;
+					margin: 0 auto;
+					max-width: fit-content;
+
+					a {
+						border: 2px solid @color-blue;
+						font-size: 0.975rem;
+						letter-spacing: 0.035rem;
+						padding: 0.5rem;
+
+						&.nasa-webpage {
+							border-left: none;
+						}
+					}
+				}
+			}
+
+			.modal-media {
+				align-items: center;
+				animation-name: zoom;
+				-webkit-animation-name: zoom;
+				animation-duration: 0.7s;
+				-webkit-animation-duration: 0.7s;
+				background: #000;
+				color: #fff;
+				display: grid;
+				height: 100%;
+				left: 0;
+				overflow-x: hidden;
+				overflow-y: auto;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 1;
+
+				.close-modal {
+					background: @color-light-gray;
+					border: solid 4px @color-light-gray;
+					border-radius: 8px;
+					fill: @color-blue;
+					max-height: 30px;
+					max-width: 30px;
+					position: absolute;
+					right: 0.5rem;
+					top: 0.5rem;
+
+					&:hover {
+						background: @color-blue;
+						border: solid 4px @color-blue;
+						cursor: pointer;
+						fill: #fff;
+					}
+				}
+
+				figure {
+					padding: 3rem 0 0;
+
+					figcaption {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.nasa-apod {
+
+		.media-today {
+
+			.non-modal-media {
+
+				figure {
+
+					picture {
+						@media-even-height-container();
+
+						img {
+							@media-even-height();
+						}
+					}
+				}
+			}
+		}
+	}
+}

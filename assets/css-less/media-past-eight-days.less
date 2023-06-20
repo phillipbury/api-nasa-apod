@@ -1,0 +1,200 @@
+.nasa-apod {
+
+	.media-past-eight-days {
+		background: #000;
+		color: #fff;
+		padding: 2rem 0 2rem 2rem;
+
+		& > * {
+			margin: 0 auto;
+			max-width: 1600px;
+		}
+
+		h1 {
+			font-family: @font-merienda;
+			font-size: 2.25rem;
+			line-height: 2.35rem;
+			padding: 0 2rem 4rem 0;
+			text-align: center;
+
+			.substring {
+				white-space: pre;
+			}
+		}
+
+		.media-container {
+			padding: 0 2rem 0 0;
+
+
+			.non-modal-media {
+
+				.date {
+					font-family: Arial, sans-serif;
+					font-size: 0.85rem;
+					font-weight: bold;
+					padding: 2rem 0 0.15rem;
+					text-align: center;
+				}
+
+				figure {
+
+					picture {
+						@media-even-height-container();
+						border: solid 0.15rem #000;
+						border-radius: 10%;
+
+						&:hover {
+							border: solid 0.15rem @color-blue;
+						}
+
+						img {
+							@media-even-height();
+							transform: scale(1.00);
+							transition: transform 0.3s ease-in;
+
+							&:hover {
+								cursor: pointer;
+								opacity: 0.75;
+								transform: scale(1.15);
+								transition: transform 0.3s ease-in;
+							}
+						}
+					}
+				}
+
+				.iframe-container {
+					@media-even-height-container();
+					border: solid 0.15rem #000;
+					border-radius: 10%;
+
+					&:hover {
+						border: solid 0.15rem @color-blue;
+					}
+
+					iframe {
+						@media-even-height();
+					}
+				}
+			}
+
+			.modal-media {
+				align-items: center;
+				animation-name: zoom;
+				-webkit-animation-name: zoom;
+				animation-duration: 0.85s;
+				-webkit-animation-duration: 0.85s;
+				background: #000;
+				color: #fff;
+				display: grid;
+				height: 100%;
+				left: 0;
+				overflow-x: hidden;
+				overflow-y: auto;
+				padding: 0 0 2rem;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 1;
+
+				.close-modal {
+					background: @color-light-gray;
+					border: solid 4px @color-light-gray;
+					border-radius: 8px;
+					fill: @color-blue;
+					max-height: 30px;
+					max-width: 30px;
+					position: absolute;
+					right: 0.5rem;
+					top: 0.5rem;
+
+					&:hover {
+						background: @color-blue;
+						border: solid 4px @color-blue;
+						cursor: pointer;
+						fill: #fff;
+					}
+				}
+
+				.date {
+					font-family: Arial, sans-serif;
+					font-size: 0.85rem;
+					font-weight: bold;
+					text-align: center;
+					padding: 1.5rem 0 1rem;
+				}
+
+				h2 {
+					font-family: @font-fondamento;
+					font-size: 2.25rem;
+					padding: 0 2rem;
+					text-align: center;
+				}
+
+				figure {
+					padding: 2rem 0 0;
+
+					figcaption {
+						color: #fff;
+					}
+				}
+
+				.description {
+					font-family: @font-ibm-plex-sans;
+					font-size: 0.95rem;
+					line-height: 1.5rem;
+					margin: 0 auto;
+					max-width: 1200px;
+					padding: 2rem;
+				}
+
+				.source {
+					display: flex;
+					margin: 0 auto;
+					max-width: fit-content;
+					padding: 0 2rem;
+
+					a {
+						border: 2px solid @color-blue;
+						font-size: 0.975rem;
+						letter-spacing: 0.035rem;
+						padding: 0.5rem;
+
+						&.nasa-webpage {
+							border-left: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+
+	.nasa-apod {
+
+		.media-past-eight-days {
+
+			.row-1 {
+				padding: 0 0 3rem 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.nasa-apod {
+
+		.media-past-eight-days {
+
+			.row-1 .media-container {
+				padding: 0 2rem 4rem 0;
+			}
+
+			.row-2 .media-container:not(:last-child) {
+				padding: 0 2rem 4rem 0;
+			}
+		}
+	}
+}
