@@ -1,0 +1,187 @@
+//▬▬▬▬▬▬
+// Fonts
+//▬▬▬▬▬▬
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap'); // Merienda
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap'); // Fondamento
+@import url('https://fonts.googleapis.com/css2?family=Overlock&display=swap'); // Overlock
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap'); // IBM Plex Sans
+
+@font-merienda: 'Merienda', cursive;
+@font-fondamento: 'Fondamento', cursive;
+@font-overlock: 'Overlock', cursive;
+@font-ibm-plex-sans: 'IBM Plex Sans', sans-serif;
+
+//▬▬▬▬▬▬▬▬▬▬▬▬
+// Font colors
+//▬▬▬▬▬▬▬▬▬▬▬▬
+
+@color-antique-white: #faebd7;
+@color-aqua: #00ffff;
+@color-blue: #0072B5;
+@color-dark-gray: #555;
+@color-light-gray: #c5c5c5;
+
+//▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+// Fundamental selector values
+//▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+html.disable-scroll,
+body.disable-scroll {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+body {
+    background: #000;
+    color: #fff;
+	font-size: 100%; // 100% of the browser's default font size. Most default value = 1rem = 16px
+	line-height: normal; // Default value is roughly 1.2
+}
+
+body,
+main,
+div,
+section,
+h1,
+h2,
+p,
+a,
+figure,
+picture,
+img,
+figcaption {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+span {
+	margin: 0;
+	padding: 0;
+}
+
+//▬▬▬▬▬▬▬▬▬▬▬▬
+// Text select
+//▬▬▬▬▬▬▬▬▬▬▬▬
+
+::selection {
+	color: #fff;
+	background: @color-blue;
+}
+
+//▬▬▬▬▬▬
+// Links
+//▬▬▬▬▬▬
+
+a {
+	background: @color-light-gray;
+    color: @color-blue;
+    display: inline-block;
+	font-family: "Times New Roman", serif;
+    font-weight: bold;
+	text-decoration: none;
+	transition: background 0.25s ease-in, color 0.25s ease-out, border 0.25s ease-in;
+}
+
+a:hover {
+	background: @color-blue;
+    color: #fff;
+	text-decoration: underline;
+	transition: background 0.25s ease-in, color 0.25s ease-out, border 0.25s ease-in;
+}
+
+a:active {
+    color: @color-aqua;
+}
+
+//▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+// Images & iframes
+//▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	width: 100%;
+}
+
+figcaption {
+	font-family: Arial, sans-serif;
+	font-size: 0.7rem;
+	line-height: 0.75rem;
+	margin: 0.35rem 0.5rem 0;
+	text-align: right;
+	word-spacing: -0.025rem;
+}
+
+@media-even-height-container: {
+	display: block;
+	height: 0;
+	overflow: hidden;
+	padding: 0 0 100%;
+	position: relative;
+	width: 100%;
+};
+
+@media-even-height: {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+};
+
+@iframe-16-9-aspect-ratio-container: {
+	overflow: hidden;
+	padding-top: 56.25%; // 16:9 Aspect Ratio (divide 9 by 16 = 0.5625)
+	position: relative;
+	width: 100%;
+};
+
+@iframe-16-9-aspect-ratio: {
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+};
+
+//▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+// Zoom-in effect: modal images
+//▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+@-webkit-keyframes zoom {
+	from {-webkit-transform:scale(0)}
+	to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+//▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+// Import .less files
+//▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+@import "media-today.less";
+@import "media-past-eight-days.less";
