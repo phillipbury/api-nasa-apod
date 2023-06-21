@@ -27,7 +27,8 @@ function apiGetData(i, json)
 	// Append today's APOD media.
 	if (postCount == 1)
 	{
-		// Append API data if the media has image with author copyright information.
+		// Append API data if the media has image without author copyright information.
+		// The JSON file doesn't always include the copyright information.
 		if (mediaType == "image" && typeof copyright == "undefined")
 		{
 			$('.nasa-apod .post-' + postCount)
@@ -59,8 +60,7 @@ function apiGetData(i, json)
 			);
 		}
 
-		// Append API data if the media has image without author copyright information.
-		// The JSON file doesn't always include the copyright information.
+		// Append API data if the media has image with author copyright information.
 		else if (mediaType == "image" && typeof copyright !== "undefined")
 		{
 			$('.nasa-apod .post-' + postCount)
@@ -117,7 +117,8 @@ function apiGetData(i, json)
 	// Append the NASA APOD media for the last 8 days (excluding today).
 	else if (postCount > 1)
 	{
-		// Append API data if the media has image with author copyright information.
+		// Append API data if the media has image without author copyright information.
+		// The JSON file doesn't always include the copyright information.
 	 	if (mediaType == "image" && typeof copyright == "undefined")
 		{
 			$('.nasa-apod .post-' + postCount)
@@ -150,8 +151,7 @@ function apiGetData(i, json)
 			);
 		}
 
-		// Append API data if the media has image without author copyright information.
-		// The JSON file doesn't always include the copyright information.
+		// Append API data if the media has image with author copyright information.
 		else if (mediaType == "image" && typeof copyright !== "undefined")
 		{
 			$('.nasa-apod .post-' + postCount)
