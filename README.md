@@ -6,7 +6,9 @@ Each image can be enlarged by clicking on the image, and a modal image will disp
 
 ## Live Demo
 
-[Project URL](https://codepen.io/codingexplorer/live/LYXZPpE) (CodePen)
+[**Project URL**](https://codepen.io/codingexplorer/live/LYXZPpE)
+
+***NOTE:*** If the media doesn't load, then it's very likely that the API is down for maintenance or isn't currently working. To test the NASA APOD API request, click on the JSON URL [https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY)
 
 ## Screenshots
 
@@ -41,15 +43,11 @@ The public `DEMO_KEY` can be used, or a rate limit increase can be obtained by s
 ### Rate Limits
 
 - `DEMO_KEY`
-```shell
-Hourly Limit: 30 requests per IP address per hour
-Daily Limit: 50 requests per IP address per day
-```
+  - Hourly Limit: 30 requests per IP address per hour
+  - Daily Limit: 50 requests per IP address per day
 
 - **NASA Developer Key**
-```shell
-Hourly Limit: 1,000 requests per hour
-```
+  - Hourly Limit: 1,000 requests per hour
 
 ## License
 
