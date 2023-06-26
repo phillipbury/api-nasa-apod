@@ -6,7 +6,7 @@ Each image can be enlarged by clicking on the image, and a modal image will disp
 
 ## Live Demo
 
-[**Project URL**](https://codepen.io/codingexplorer/live/LYXZPpE)
+[**Project URL**](https://codepen.io/phillipbury/live/LYXZPpE)
 
 ***NOTE:*** If the media doesn't load, then it's very likely that the API is down for maintenance or isn't currently working. To test the NASA APOD API request, click on the JSON URL [https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY)
 
