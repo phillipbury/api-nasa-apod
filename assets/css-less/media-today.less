@@ -154,6 +154,29 @@
 	}
 }
 
+@media screen and (min-width: 768px) {
+
+	.nasa-apod {
+
+		.media-today {
+
+			.non-modal-media {
+
+				figure {
+
+					picture {
+						@media-3-2-aspect-ratio-container();
+
+						img {
+							@media-3-2-aspect-ratio();
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 767px) {
 
 	.nasa-apod {
